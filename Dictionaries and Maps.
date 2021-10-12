@@ -1,0 +1,18 @@
+#Developer- Subham Deb
+
+n = int(input("Enter the Number of Contacts to be added in PhoneBook :"))
+phoneBook=dict(input("Enter the Name and Numbers separated by a space: \n").split() for x in range(n))
+print(phoneBook)
+
+while (True):
+    try:
+        name = input("\nEnter the Name whose number is to be printed :")
+        if name in phoneBook:
+            print (f"{name} = {phoneBook.get(name)}")
+        elif name not in phoneBook:
+            if (name == ''):
+                break
+            else:
+                print("Not Found")
+   except:
+      break
